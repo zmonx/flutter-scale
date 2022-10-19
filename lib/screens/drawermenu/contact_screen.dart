@@ -26,13 +26,12 @@ class _ContactScreenState extends State<ContactScreen> {
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
           target: LatLng(13.783548, 100.54655),
-          zoom: 20,
+          zoom: 17,
         ),
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
         },
-        mapType: MapType.hybrid,
-
+        mapType: MapType.terrain,
       ),
     );
   }
