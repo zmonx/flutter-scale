@@ -15,7 +15,15 @@ class ContactScreen extends StatefulWidget {
 class _ContactScreenState extends State<ContactScreen> {
 // create maps conroller
 
-  Completer<GoogleMapController> _controller = Completer();
+  // Completer<GoogleMapController> _controller = Completer();
+
+  late GoogleMapController mapController;
+
+  final LatLng _center = const LatLng(13.783548, 100.54655);
+
+  void _onMapCreated(GoogleMapController controller) {
+    mapController = controller;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +33,10 @@ class _ContactScreenState extends State<ContactScreen> {
       ),
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
-          target: LatLng(13.783548, 100.54655),
-          zoom: 17,
+          target: _center,
+          zoom: 17.0,
         ),
-        onMapCreated: (GoogleMapController controller) {
-          _controller.complete(controller);
-        },
+        onMapCreated: _onMapCreated,
         mapType: MapType.terrain,
       ),
     );

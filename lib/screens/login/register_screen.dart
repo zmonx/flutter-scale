@@ -123,6 +123,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         width: 250,
                         child: inputFieldwidget(
                           obscureText: true,
+                          maxline: 1,
                           context,
                           Icon(Icons.password_outlined),
                           "Password",
