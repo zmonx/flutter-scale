@@ -10,6 +10,7 @@ import 'package:flutter_scale/screens/drawermenu/info_screen.dart';
 import 'package:flutter_scale/screens/login/login_screen.dart';
 import 'package:flutter_scale/screens/login/register_screen.dart';
 import 'package:flutter_scale/screens/newsDetail/new_detail_screen.dart';
+import 'package:flutter_scale/screens/scan/scan_result_screen.dart';
 import 'package:flutter_scale/screens/updateproduct/update_product_screen.dart';
 import 'package:flutter_scale/screens/welcome/welcome_screen.dart';
 
@@ -23,6 +24,7 @@ Map<String, WidgetBuilder> routes = {
   '/newsdetail': (BuildContext) => NewsDetailScreen(),
   '/addproduct': (BuildContext) => AddProductScreen(),
   '/edtproduct': (BuildContext) => UpdateProductScreen(),
+  '/scan': (BuildContext) => ScanResultScreen(),
   //drawer
   '/contact': (BuildContext) => ContactScreen(),
   '/info': (BuildContext) => InfoScreen(),

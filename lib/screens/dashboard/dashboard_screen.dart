@@ -110,28 +110,31 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
             ),
             ListTile(
               leading: Icon(Icons.person, color: icons),
-              title: Text("About us"),
+              title: Text(
+                "About us",
+                style: TextStyle(color: icons),
+              ),
               onTap: () {
                 Navigator.pushNamed(context, '/about');
               },
             ),
             ListTile(
               leading: Icon(Icons.info_outline, color: icons),
-              title: Text("info"),
+              title: Text("info", style: TextStyle(color: icons)),
               onTap: () {
                 Navigator.pushNamed(context, '/info');
               },
             ),
             ListTile(
               leading: Icon(Icons.contact_page, color: icons),
-              title: Text("Contact"),
+              title: Text("Contact", style: TextStyle(color: icons)),
               onTap: () {
                 Navigator.pushNamed(context, '/contact');
               },
             ),
             ListTile(
               leading: Icon(Icons.logout, color: icons),
-              title: Text("log out"),
+              title: Text("log out", style: TextStyle(color: icons)),
               onTap: () {
                 logOut();
                 Navigator.pushReplacementNamed(context, '/login');
